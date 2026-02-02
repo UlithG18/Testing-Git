@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS – Cheat Sheet Explicada</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+    <!-- ================= HEADER ================= -->
+    <header class="text-center py-8 bg-blue-600 text-white">
+        <h1 class="text-3xl font-bold">Tailwind CSS – Cheat Sheet</h1>
+        <p class="text-sm mt-2">
+            Referencia práctica y explicada para maquetar rápido sin CSS puro
+        </p>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="max-w-6xl mx-auto p-6 space-y-8">
+
+        <!-- ================= LAYOUT ================= -->
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-2xl font-semibold mb-3">Layout (Estructura)</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                Tailwind permite crear layouts sin escribir CSS usando Flexbox y Grid.
+                Estas clases definen cómo se organizan los elementos en la página.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+
+                <div>
+                    <h3 class="font-semibold mb-2">Flexbox</h3>
+                    <ul class="list-disc ml-4 space-y-1">
+                        <li><strong>flex</strong>: activa flexbox</li>
+                        <li>flex-row / flex-col: dirección</li>
+                        <li>justify-start | center | between</li>
+                        <li>items-start | center | end</li>
+                        <li>gap-1 a gap-12: espacio entre hijos</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-2">Grid</h3>
+                    <ul class="list-disc ml-4 space-y-1">
+                        <li><strong>grid</strong>: activa grid</li>
+                        <li>grid-cols-1 a grid-cols-12</li>
+                        <li>col-span-1 a col-span-12</li>
+                        <li>gap-1 a gap-12</li>
+                        <li>sm:grid-cols-2, md:grid-cols-3</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-2">Tamaños</h3>
+                    <ul class="list-disc ml-4 space-y-1">
+                        <li>w-full / h-full</li>
+                        <li>min-h-screen</li>
+                        <li>max-w-sm a max-w-2xl</li>
+                        <li>container mx-auto</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= SPACING ================= -->
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-2xl font-semibold mb-3">Espaciado</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                El espaciado controla márgenes, relleno interno y separación entre elementos.
+                Es clave para una interfaz limpia y legible.
+            </p>
+
+            <ul class="list-disc ml-6 text-sm space-y-2">
+                <li><strong>Margin</strong>: m-1..12, mt-, mb-, ml-, mr-, mx-, my-</li>
+                <li><strong>Padding</strong>: p-1..12, pt-, pb-, pl-, pr-, px-, py-</li>
+                <li><strong>Separación entre hijos</strong>: space-x-2, space-y-4</li>
+            </ul>
+        </section>
+
+        <!-- ================= TYPOGRAPHY ================= -->
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-2xl font-semibold mb-3">Tipografía</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                Tailwind permite controlar texto sin CSS adicional:
+                tamaño, peso, color, alineación y espaciado.
+            </p>
+
+            <ul class="list-disc ml-6 text-sm space-y-2">
+                <li>Tamaño: text-xs a text-5xl</li>
+                <li>Peso: font-thin a font-extrabold</li>
+                <li>Color: text-gray-500, text-blue-600, text-white</li>
+                <li>Alineación: text-left, center, right, justify</li>
+                <li>Tracking y line-height: tracking-wide, leading-relaxed</li>
+            </ul>
+        </section>
+
+        <!-- ================= COLORS ================= -->
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-2xl font-semibold mb-3">Colores y fondos</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                Los colores en Tailwind siguen una escala numérica.
+                Esto ayuda a mantener consistencia visual.
+            </p>
+
+            <ul class="list-disc ml-6 text-sm space-y-2">
+                <li>Fondos: bg-gray-50, bg-white, bg-blue-500</li>
+                <li>Texto: text-gray-700, text-indigo-600</li>
+                <li>Hover: hover:bg-blue-700, hover:text-white</li>
+                <li>Focus: focus:ring-2 focus:ring-blue-400</li>
+            </ul>
+        </section>
+
+        <!-- ================= BORDERS & SHADOWS ================= -->
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-2xl font-semibold mb-3">Bordes y sombras</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                Usados para separar secciones y dar jerarquía visual.
+            </p>
+
+            <ul class="list-disc ml-6 text-sm space-y-2">
+                <li>border, border-2, border-t, border-b</li>
+                <li>border-gray-300, border-indigo-500</li>
+                <li>rounded, rounded-md, rounded-lg, rounded-full</li>
+                <li>shadow-sm a shadow-2xl</li>
+            </ul>
+        </section>
+
+        <!-- ================= EFFECTS ================= -->
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-2xl font-semibold mb-3">Efectos y transiciones</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                Permiten mejorar la experiencia del usuario sin JavaScript.
+            </p>
+
+            <ul class="list-disc ml-6 text-sm space-y-2">
+                <li>transition, transition-colors, transition-all</li>
+                <li>duration-150 a duration-500</li>
+                <li>hover:scale-105</li>
+                <li>opacity-0 a opacity-100</li>
+            </ul>
+        </section>
+
+        <!-- ================= RESPONSIVE ================= -->
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-2xl font-semibold mb-3">Responsive Design</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                Tailwind es mobile-first. Las clases se aplican desde el tamaño más pequeño.
+            </p>
+
+            <ul class="list-disc ml-6 text-sm space-y-2">
+                <li>sm (640px), md (768px), lg (1024px), xl (1280px)</li>
+                <li>
+                    Ejemplo:
+                    <code class="bg-gray-200 px-2 py-1 rounded">
+                        p-4 md:p-6 lg:p-8
+                    </code>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ================= COMMON COMBOS ================= -->
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-2xl font-semibold mb-3">Combos útiles</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                Combinaciones listas para usar en dashboards y formularios.
+            </p>
+
+            <ul class="list-disc ml-6 text-sm space-y-2">
+                <li>
+                    Botón:
+                    <code class="bg-gray-200 px-2 py-1 rounded">
+                        px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition
+                    </code>
+                </li>
+                <li>
+                    Card:
+                    <code class="bg-gray-200 px-2 py-1 rounded">
+                        p-6 bg-white rounded-lg shadow hover:shadow-xl
+                    </code>
+                </li>
+                <li>
+                    Grid responsive:
+                    <code class="bg-gray-200 px-2 py-1 rounded">
+                        grid grid-cols-1 md:grid-cols-3 gap-6
+                    </code>
+                </li>
+                <li>
+                    Input:
+                    <code class="bg-gray-200 px-2 py-1 rounded">
+                        p-2 border rounded focus:ring-2 focus:ring-blue-400 w-full
+                    </code>
+                </li>
+            </ul>
+        </section>
+        <!-- ================= BUTTON STATES ================= -->
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-2xl font-semibold mb-3">Buttons – Estados y variantes</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                Los botones suelen evaluarse por sus estados. Tailwind permite manejarlos sin JS.
+            </p>
+
+            <ul class="list-disc ml-6 text-sm space-y-2">
+                <li>Hover: hover:bg-indigo-700 hover:text-white</li>
+                <li>Active: active:scale-95</li>
+                <li>Focus: focus:outline-none focus:ring-2 focus:ring-indigo-500</li>
+                <li>Disabled: disabled:opacity-50 disabled:cursor-not-allowed</li>
+                <li>
+                    Ejemplo:
+                    <code class="bg-gray-200 px-2 py-1 rounded">
+                px-4 py-2 bg-indigo-600 text-white rounded
+                hover:bg-indigo-700 active:scale-95
+                disabled:opacity-50
+            </code>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ================= FORMS ADVANCED ================= -->
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-2xl font-semibold mb-3">Forms – Inputs avanzados</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                Formularios bien estilizados son clave en dashboards y perfiles.
+            </p>
+
+            <ul class="list-disc ml-6 text-sm space-y-2">
+                <li>Placeholder: placeholder-gray-400</li>
+                <li>Estados inválidos: border-red-500 text-red-600</li>
+                <li>Select: appearance-none bg-white</li>
+                <li>Textarea: resize-none</li>
+                <li>
+                    Input completo:
+                    <code class="bg-gray-200 px-2 py-1 rounded">
+                w-full px-3 py-2 border rounded
+                focus:ring-2 focus:ring-indigo-500
+            </code>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ================= POSITION & Z-INDEX ================= -->
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-2xl font-semibold mb-3">Position y Z-index</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                Esencial para modales, dropdowns y tooltips.
+            </p>
+
+            <ul class="list-disc ml-6 text-sm space-y-2">
+                <li>position: relative, absolute, fixed, sticky</li>
+                <li>Ubicación: top-0, right-0, inset-0</li>
+                <li>Z-index: z-10, z-20, z-50</li>
+                <li>
+                    Modal backdrop:
+                    <code class="bg-gray-200 px-2 py-1 rounded">
+                fixed inset-0 bg-black/50 z-50
+            </code>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ================= OVERFLOW & SCROLL ================= -->
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-2xl font-semibold mb-3">Overflow y Scroll</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                Muy usado en listas largas, tablas y modales.
+            </p>
+
+            <ul class="list-disc ml-6 text-sm space-y-2">
+                <li>overflow-hidden</li>
+                <li>overflow-auto</li>
+                <li>overflow-y-scroll</li>
+                <li>max-h-64, max-h-screen</li>
+            </ul>
+        </section>
+
+        <!-- ================= IMAGES & MEDIA ================= -->
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-2xl font-semibold mb-3">Imágenes y media</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                Importante para perfiles, avatares y cards.
+            </p>
+
+            <ul class="list-disc ml-6 text-sm space-y-2">
+                <li>object-cover (imprescindible)</li>
+                <li>object-contain</li>
+                <li>rounded-full (avatares)</li>
+                <li>w-10 h-10, w-24 h-24</li>
+                <li>
+                    Avatar:
+                    <code class="bg-gray-200 px-2 py-1 rounded">
+                w-12 h-12 rounded-full object-cover
+            </code>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ================= TABLES ================= -->
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-2xl font-semibold mb-3">Tablas</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                Frecuentes en paneles de administración.
+            </p>
+
+            <ul class="list-disc ml-6 text-sm space-y-2">
+                <li>table-auto, w-full</li>
+                <li>border-collapse</li>
+                <li>text-left text-sm</li>
+                <li>odd:bg-gray-50</li>
+            </ul>
+        </section>
+
+        <!-- ================= STATE VARIANTS ================= -->
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-2xl font-semibold mb-3">State Variants</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                Permiten estilos condicionales sin JavaScript.
+            </p>
+
+            <ul class="list-disc ml-6 text-sm space-y-2">
+                <li>hover:</li>
+                <li>focus:</li>
+                <li>active:</li>
+                <li>disabled:</li>
+                <li>group-hover:</li>
+                <li>peer-focus:</li>
+            </ul>
+        </section>
+
+        <!-- ================= DARK MODE ================= -->
+        <section class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-2xl font-semibold mb-3">Dark Mode</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                Cada vez más común en pruebas modernas.
+            </p>
+
+            <ul class="list-disc ml-6 text-sm space-y-2">
+                <li>dark:bg-gray-900</li>
+                <li>dark:text-white</li>
+                <li>dark:border-gray-700</li>
+                <li>
+                    Ejemplo:
+                    <code class="bg-gray-200 px-2 py-1 rounded">
+                bg-white dark:bg-gray-800 text-black dark:text-white
+            </code>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="text-center py-4 bg-gray-200 text-gray-700 text-sm">
+        Cheat Sheet de Tailwind CSS para pruebas técnicas y desarrollo rápido.
+    </footer>
+
+</body>
+
+</html>
